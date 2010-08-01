@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="bv170-jsbsim-cnf.xml"> -->
+<PropertyList include="bv170-yasim-cnf.xml">
+
+  <sim>
+    <description>Blohm und Voss BV170</description>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
+  </sim>
+
+</PropertyList>
+

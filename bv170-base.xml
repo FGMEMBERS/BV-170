@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/BV-170/bv170-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/BV-170/Sounds/bv170-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/BV-170/Models/bv170.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Blohm Und Voss BV 141</title>
+    </help>
+
+    <menubar include="Dialogs/bv170-menu.xml"/>
+
+  </sim>
+ 
+  <input>
+    <keyboard include="Nasal/bv170-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <bv170>
+      <file>Aircraft/BV-170/Nasal/doors.nas</file>
+      <file>Aircraft/BV-170/Nasal/liveries.nas</file>
+    </bv170>
+  </nasal>
+   
+</PropertyList>
