@@ -222,6 +222,230 @@
     </offsets>
   </model>
 
+  <!-- Cranking effects -->
+  <!-- Moteur Gauche / Gauche haut -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m> -7.893 </y-m>
+      <z-m>  0.939 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Gauche / Gauche Milieu -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m> -7.935 </y-m>
+      <z-m>  0.581 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Gauche / Gauche Bas -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m> -7.738 </y-m>
+      <z-m>  0.223 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Gauche / Droit haut -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m> -6.793 </y-m>
+      <z-m>  0.939 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Gauche / Droit Milieu -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m> -6.751 </y-m>
+      <z-m>  0.581 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Gauche / Droit Bas -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m> -6.948 </y-m>
+      <z-m>  0.223 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Droit / Droit haut -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m>  7.893 </y-m>
+      <z-m>  0.939 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Droit / Droit Milieu -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m>  7.935 </y-m>
+      <z-m>  0.581 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Droit / Droit Bas -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m>  7.738 </y-m>
+      <z-m>  0.223 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Droit / Gauche haut -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m>  6.793 </y-m>
+      <z-m>  0.939 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Droit / Gauche Milieu -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m>  6.751 </y-m>
+      <z-m>  0.581 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Droit / Gauche Bas -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m>  6.948 </y-m>
+      <z-m>  0.223 </z-m>
+    </offsets>
+  </model>
+
+
+  <!-- Moteur Centre / Gauche haut -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m> -0.555 </y-m>
+      <z-m>  0.939 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Centre / Gauche Milieu -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m> -0.592 </y-m>
+      <z-m>  0.581 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Centre / Gauche Bas -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m> -0.395 </y-m>
+      <z-m>  0.223 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Centre / Droit haut -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m>  0.555 </y-m>
+      <z-m>  0.939 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Centre / Droit Milieu -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m>  0.592 </y-m>
+      <z-m>  0.581 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Centre / Droit Bas -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m>  0.395 </y-m>
+      <z-m>  0.223 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Effets sur le sol -->
+  <!-- Roue gauche -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/ground/ground0.xml</path>
+    <offsets>
+      <x-m> -4.305 </x-m>
+      <y-m> -7.283 </y-m>
+      <z-m> -1.809 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue centre -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/ground/ground1.xml</path>
+    <offsets>
+      <x-m> -4.305 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.809 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue droite -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/ground/ground2.xml</path>   
+    <offsets>
+      <x-m> -4.305 </x-m>
+      <y-m>  7.283 </y-m>
+      <z-m> -1.809 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Patte de queue -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/ground/ground2.xml</path>   
+    <offsets>
+      <x-m>  5.502 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.070 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Les mmoteurs -->
   <!-- Moteur Left -->
   <model>
     <path>Aircraft/BV-170/Models/Engines/bmw801.xml</path>
@@ -694,6 +918,24 @@
     <object-name>roueA</object-name>
     <property>/gear/gear[3]/compression-norm</property>
     <factor> 0.2 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <!-- Rotation de la roulette de queue en fonction de la gouverne de direction -->
+  <animation>
+    <type>rotate</type>
+    <object-name>roueA</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+      <x-m> 5.502 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.220 </z-m>
+    </center>
     <axis>
       <x> 0 </x>
       <y> 0 </y>

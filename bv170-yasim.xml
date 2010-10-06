@@ -125,21 +125,18 @@
   -->
   <propeller x="6.080" y="7.343" z="0.681"
              mass="1012"
-	     moment="35"
+	     moment="10"
 	     radius="1.75"
              cruise-power="1065"
   	     cruise-speed="400"
              cruise-rpm="2300"
 	     cruise-alt="26000"
-             gear-ratio="0.53"
-             min-rpm="50.0"
-             max-rpm="2700">
+             gear-ratio="0.62">
              <actionpt x="6.691" y="7.343" z="0.681"/>
              <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
              <piston-engine eng-power="1539"
 	                    eng-rpm="2700"
                             displacement="2560"
-                            supercharger="1"
                             compression="6.5">
                             <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
                             <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
@@ -150,21 +147,18 @@
 
   <propeller x="6.080" y="0" z="0.681"
              mass="1012"
-	     moment="35"
+	     moment="10"
 	     radius="1.75"
              cruise-power="1065"
   	     cruise-speed="400"
              cruise-rpm="2300"
 	     cruise-alt="26000"
-             gear-ratio="0.53"
-             min-rpm="50.0"
-             max-rpm="2700">
+             gear-ratio="0.62">
              <actionpt x="6.691" y="0" z="0.681"/>
              <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
              <piston-engine eng-power="1539"
 	                    eng-rpm="2700"
                             displacement="2560"
-                            supercharger="1"
                             compression="6.5">
                             <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
                             <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
@@ -175,21 +169,18 @@
 
   <propeller x="6.080" y="-7.343" z="0.681"
              mass="1012"
-	     moment="35"
+	     moment="10"
 	     radius="1.75"
              cruise-power="1065"
   	     cruise-speed="400"
              cruise-rpm="2300"
 	     cruise-alt="26000"
-             gear-ratio="0.53"
-             min-rpm="50.0"
-             max-rpm="2700">
+             gear-ratio="0.62">
              <actionpt x="6.691" y="-7.343" z="0.681"/>
              <control-input axis="/controls/engines/engine[2]/propeller-pitch" control="ADVANCE"/>
              <piston-engine eng-power="1539"
 	                    eng-rpm="2700"
                             displacement="2560"
-                            supercharger="1"
                             compression="6.5">
                             <control-input axis="/controls/engines/engine[2]/throttle" control="THROTTLE"/>
                             <control-input axis="/controls/engines/engine[2]/starter" control="STARTER"/>
@@ -245,9 +236,11 @@
         compression="0.15"
         spring="0.6"
         retract-time="5">
+        <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="0.8" dst1="-0.8"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
         <control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
+
 
         <control-speed control="EXTEND" transition-time="4"/>
   </gear>
