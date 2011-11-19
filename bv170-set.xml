@@ -4,8 +4,17 @@
 <PropertyList include="bv170-yasim-cnf.xml">
 
   <sim>
-    <description>Blohm und Voss BV170</description>
+
+    <description>Blohm und Voss BV170 (YASim)</description>
     <author>BARANGER Emmanuel (3D/FDM)</author>
+
+    <rating>
+     <FDM type="int">     2 </FDM>
+     <systems type="int"> 1 </systems>
+     <cockpit type="int"> 2 </cockpit>
+     <model type="int">   4 </model>
+    </rating>
+
   </sim>
 
 </PropertyList>

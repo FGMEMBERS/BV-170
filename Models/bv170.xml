@@ -7,9 +7,23 @@
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/BV-170/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
     </load>
+
     <unload>
       livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
     </unload>
   </nasal>
 
@@ -17,7 +31,6 @@
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
     <object-name>capots</object-name>
-    <object-name>echappes</object-name>
     <object-name>ailes</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
@@ -30,28 +43,30 @@
     <object-name>directionD</object-name>
     <object-name>porteGG</object-name>
     <object-name>porteGD</object-name>
-    <object-name>axeHG</object-name>
-    <object-name>axeBG</object-name>
-    <object-name>roueG</object-name>
     <object-name>porteCG</object-name>
     <object-name>porteCD</object-name>
-    <object-name>axeHC</object-name>
-    <object-name>axeBC</object-name>
-    <object-name>roueC</object-name>
     <object-name>porteDG</object-name>
     <object-name>porteDD</object-name>
-    <object-name>axeHD</object-name>
-    <object-name>axeBD</object-name>
-    <object-name>roueD</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
-    <object-name>roueA</object-name>
     <object-name>bolG</object-name>
     <object-name>bolC</object-name>
     <object-name>bolD</object-name>
+
+    <object-name>echappes</object-name>
     <object-name>heliceG</object-name>
     <object-name>heliceC</object-name>
     <object-name>heliceD</object-name>
+    <object-name>axeHG</object-name>
+    <object-name>axeBG</object-name>
+    <object-name>roueG</object-name>
+    <object-name>axeHC</object-name>
+    <object-name>axeBC</object-name>
+    <object-name>roueC</object-name>
+    <object-name>axeHD</object-name>
+    <object-name>axeBD</object-name>
+    <object-name>roueD</object-name>
+    <object-name>roueA</object-name>
     <object-name>trous</object-name>
 
     <!-- Objets transparents -->
@@ -68,7 +83,6 @@
     <type>material</type>
     <object-name>fuselage</object-name>
     <object-name>capots</object-name>
-    <object-name>echappes</object-name>
     <object-name>ailes</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
@@ -81,28 +95,30 @@
     <object-name>directionD</object-name>
     <object-name>porteGG</object-name>
     <object-name>porteGD</object-name>
-    <object-name>axeHG</object-name>
-    <object-name>axeBG</object-name>
-    <object-name>roueG</object-name>
     <object-name>porteCG</object-name>
     <object-name>porteCD</object-name>
-    <object-name>axeHC</object-name>
-    <object-name>axeBC</object-name>
-    <object-name>roueC</object-name>
     <object-name>porteDG</object-name>
     <object-name>porteDD</object-name>
-    <object-name>axeHD</object-name>
-    <object-name>axeBD</object-name>
-    <object-name>roueD</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
-    <object-name>roueA</object-name>
     <object-name>bolG</object-name>
     <object-name>bolC</object-name>
     <object-name>bolD</object-name>
+
+    <object-name>echappes</object-name>
     <object-name>heliceG</object-name>
     <object-name>heliceC</object-name>
     <object-name>heliceD</object-name>
+    <object-name>axeHG</object-name>
+    <object-name>axeBG</object-name>
+    <object-name>roueG</object-name>
+    <object-name>axeHC</object-name>
+    <object-name>axeBC</object-name>
+    <object-name>roueC</object-name>
+    <object-name>axeHD</object-name>
+    <object-name>axeBD</object-name>
+    <object-name>roueD</object-name>
+    <object-name>roueA</object-name>
     <object-name>trous</object-name>
 
     <property-base>sim/model/livery</property-base>
@@ -153,9 +169,6 @@
     <object-name>derives</object-name>
     <object-name>directionG</object-name>
     <object-name>directionD</object-name>
-    <object-name>bolG</object-name>
-    <object-name>bolC</object-name>
-    <object-name>bolD</object-name>
     <object-name>porteGG</object-name>
     <object-name>porteGD</object-name>
     <object-name>porteCG</object-name>
@@ -164,6 +177,9 @@
     <object-name>porteDD</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
+    <object-name>bolG</object-name>
+    <object-name>bolC</object-name>
+    <object-name>bolD</object-name>
   </effect>
 
   <animation>
@@ -212,14 +228,20 @@
     </condition>
   </animation>
 
+  <!-- Une ombre pour OSG -->
+  <model>
+    <name>shadowOSG</name>
+    <path>Aircraft/BV-170/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.900 </z-m>
+    </offsets>
+  </model>
+
   <!-- Interieur -->
   <model>
     <path>Aircraft/BV-170/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
   </model>
 
   <!-- Cranking effects -->
@@ -520,7 +542,7 @@
     <condition>
       <less-than>
         <property>engines/engine[0]/rpm</property>
-	<value>1500</value>
+        <value>1500</value>
       </less-than>
     </condition>
   </animation>
@@ -585,7 +607,7 @@
     <condition>
       <less-than>
         <property>engines/engine[1]/rpm</property>
-	<value>1500</value>
+        <value>1500</value>
       </less-than>
     </condition>
   </animation>
@@ -650,7 +672,7 @@
     <condition>
       <less-than>
         <property>engines/engine[2]/rpm</property>
-	<value>1500</value>
+        <value>1500</value>
       </less-than>
     </condition>
   </animation>
@@ -792,7 +814,7 @@
     <object-name>roueG</object-name>
     <object-name>axeHG</object-name>
     <object-name>axeBG</object-name>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 1 </ind><dep>    0 </dep></entry>
       <entry><ind> 0 </ind><dep> -113 </dep></entry>
@@ -814,7 +836,7 @@
     <object-name>roueC</object-name>
     <object-name>axeHC</object-name>
     <object-name>axeBC</object-name>
-    <property>/gear/gear[1]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry><ind> 1 </ind><dep>    0 </dep></entry>
       <entry><ind> 0 </ind><dep> -113 </dep></entry>
@@ -836,7 +858,7 @@
     <object-name>roueD</object-name>
     <object-name>axeHD</object-name>
     <object-name>axeBD</object-name>
-    <property>/gear/gear[2]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind> 1 </ind><dep>    0 </dep></entry>
       <entry><ind> 0 </ind><dep> -113 </dep></entry>
@@ -856,7 +878,7 @@
   <animation>
     <type>rotate</type>
     <object-name>roueA</object-name>
-    <property>/gear/gear[3]/position-norm</property>
+    <property>gear/gear[3]/position-norm</property>
     <interpolation>
       <entry><ind> 1 </ind><dep>   0 </dep></entry>
       <entry><ind> 0 </ind><dep> -55 </dep></entry>
@@ -878,7 +900,7 @@
     <type>translate</type>
     <object-name>roueG</object-name>
     <object-name>axeBG</object-name>
-    <property>/gear/gear[0]/compression-norm</property>
+    <property>gear/gear[0]/compression-norm</property>
     <factor> 0.3 </factor>
     <axis>
       <x> 0 </x>
@@ -891,7 +913,7 @@
     <type>translate</type>
     <object-name>roueC</object-name>
     <object-name>axeBC</object-name>
-    <property>/gear/gear[1]/compression-norm</property>
+    <property>gear/gear[1]/compression-norm</property>
     <factor> 0.3 </factor>
     <axis>
       <x> 0 </x>
@@ -904,7 +926,7 @@
     <type>translate</type>
     <object-name>roueD</object-name>
     <object-name>axeBD</object-name>
-    <property>/gear/gear[2]/compression-norm</property>
+    <property>gear/gear[2]/compression-norm</property>
     <factor> 0.3 </factor>
     <axis>
       <x> 0 </x>
@@ -916,7 +938,7 @@
   <animation>
     <type>translate</type>
     <object-name>roueA</object-name>
-    <property>/gear/gear[3]/compression-norm</property>
+    <property>gear/gear[3]/compression-norm</property>
     <factor> 0.2 </factor>
     <axis>
       <x> 0 </x>
@@ -947,7 +969,7 @@
   <animation>
     <type>spin</type>
     <object-name>roueG</object-name>
-    <property>/gear/gear[0]/rollspeed-ms</property>
+    <property>gear/gear[0]/rollspeed-ms</property>
     <factor> 30 </factor>
     <center>
       <x-m> -4.305 </x-m>
@@ -964,7 +986,7 @@
   <animation>
     <type>spin</type>
     <object-name>roueC</object-name>
-    <property>/gear/gear[1]/rollspeed-ms</property>
+    <property>gear/gear[1]/rollspeed-ms</property>
     <factor> 30 </factor>
     <center>
       <x-m> -4.305 </x-m>
@@ -981,7 +1003,7 @@
   <animation>
     <type>spin</type>
     <object-name>roueD</object-name>
-    <property>/gear/gear[2]/rollspeed-ms</property>
+    <property>gear/gear[2]/rollspeed-ms</property>
     <factor> 30 </factor>
     <center>
       <x-m> -4.305 </x-m>
@@ -998,7 +1020,7 @@
   <animation>
     <type>spin</type>
     <object-name>roueA</object-name>
-    <property>/gear/gear[3]/rollspeed-ms</property>
+    <property>gear/gear[3]/rollspeed-ms</property>
     <factor> 30 </factor>
     <center>
       <x-m> 5.502 </x-m>
