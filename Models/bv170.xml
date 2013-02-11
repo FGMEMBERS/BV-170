@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -124,35 +124,16 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -180,6 +161,39 @@
     <object-name>bolG</object-name>
     <object-name>bolC</object-name>
     <object-name>bolD</object-name>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-combined-deferred</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>capots</object-name>
+    <object-name>ailes</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>volets</object-name>
+    <object-name>ailes2</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>moteurs</object-name>
+    <object-name>derives</object-name>
+    <object-name>directionG</object-name>
+    <object-name>directionD</object-name>
+    <object-name>porteGG</object-name>
+    <object-name>porteGD</object-name>
+    <object-name>porteCG</object-name>
+    <object-name>porteCD</object-name>
+    <object-name>porteDG</object-name>
+    <object-name>porteDD</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>porteAD</object-name>
+    <object-name>bolG</object-name>
+    <object-name>bolC</object-name>
+    <object-name>bolD</object-name>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
   </effect>
 
   <animation>
@@ -199,6 +213,21 @@
     <object-name>propdiscD</object-name>
     <object-name>propblurD</object-name>
   </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitres</object-name>
+    <object-name>propdiscG</object-name>
+    <object-name>propblurG</object-name>
+    <object-name>propdiscC</object-name>
+    <object-name>propblurC</object-name>
+    <object-name>propdiscD</object-name>
+    <object-name>propblurD</object-name>
+  </effect>
 
   <!-- Effacement des roues une fois les trains rentrés -->
   <animation>
@@ -230,19 +259,25 @@
 
   <!-- Une ombre pour OSG -->
   <model>
-    <name>shadowOSG</name>
     <path>Aircraft/BV-170/Models/shadow.xml</path>
     <offsets>
-      <x-m>  0.000 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.900 </z-m>
+      <x-m>  0.00 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> -0.88 </z-m>
     </offsets>
   </model>
 
   <!-- Interieur -->
   <model>
+    <name>Interieur</name>
     <path>Aircraft/BV-170/Models/Interior/interior.xml</path>
   </model>
+
+  <!-- For Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>Interieur</object-name>
+  </animation>
 
   <!-- Cranking effects -->
   <!-- Moteur Gauche / Gauche haut -->
@@ -459,7 +494,7 @@
 
   <!-- Patte de queue -->
   <model>
-    <path>Aircraft/BV-170/Models/Effects/ground/ground2.xml</path>   
+    <path>Aircraft/BV-170/Models/Effects/ground/ground3.xml</path>   
     <offsets>
       <x-m>  5.502 </x-m>
       <y-m>  0.000 </y-m>
@@ -470,9 +505,9 @@
   <!-- Les mmoteurs -->
   <!-- Moteur Left -->
   <model>
-    <path>Aircraft/BV-170/Models/Engines/bmw801.xml</path>
+    <path>Aircraft/BV-170/Models/Engines/engine.xml</path>
     <offsets>
-      <x-m> -6.209 </x-m>
+      <x-m> -6.000 </x-m>
       <y-m> -7.343 </y-m>
       <z-m>  0.681 </z-m>
     </offsets>
@@ -480,9 +515,9 @@
 
   <!-- Moteur Center -->
   <model>
-    <path>Aircraft/BV-170/Models/Engines/bmw801.xml</path>
+    <path>Aircraft/BV-170/Models/Engines/engine.xml</path>
     <offsets>
-      <x-m> -6.209 </x-m>
+      <x-m> -6.000 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.681 </z-m>
     </offsets>
@@ -490,9 +525,9 @@
 
   <!-- Moteur Right -->
   <model>
-    <path>Aircraft/BV-170/Models/Engines/bmw801.xml</path>
+    <path>Aircraft/BV-170/Models/Engines/engine.xml</path>
     <offsets>
-      <x-m> -6.209 </x-m>
+      <x-m> -6.000 </x-m>
       <y-m>  7.343 </y-m>
       <z-m>  0.681 </z-m>
     </offsets>
@@ -1187,5 +1222,59 @@
     </axis>
   </animation>
 
-</PropertyList>
+  <!-- Ajout des effets lumineux -->
+  <model>
+    <path>Aircraft/BV-170/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> 5.92522 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 1.46759 </z-m>
+    </offsets>
+  </model>
 
+  <model>
+    <path>Aircraft/BV-170/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> 0.13723 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.14562 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/BV-170/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m> -3.72731 </x-m>
+      <y-m> -7.94204 </y-m>
+      <z-m>  0.68120 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/BV-170/Models/light/StrobeLight.xml</path>
+    <offsets>
+      <x-m> -3.60731 </x-m>
+      <y-m> -7.94204 </y-m>
+      <z-m>  0.68120 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/BV-170/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m> -3.72731 </x-m>
+      <y-m>  7.94204 </y-m>
+      <z-m>  0.68120 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/BV-170/Models/light/StrobeLight.xml</path>
+    <offsets>
+      <x-m> -3.60731 </x-m>
+      <y-m>  7.94204 </y-m>
+      <z-m>  0.68120 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

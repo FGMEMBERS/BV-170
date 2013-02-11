@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -37,12 +37,14 @@
   </view>
 
   <view n="0">
-    <internal archive="y">true</internal>
+    <name>Pilote</name>
+    <type>lookfrom</type>
+    <internal>true</internal>
     <config>
       <x-offset-m archive="y"> 0.000 </x-offset-m> <!--right-->
       <y-offset-m archive="y"> 1.590 </y-offset-m> <!--up-->
       <z-offset-m archive="y"> 2.720 </z-offset-m> <!--back-->
-      <pitch-offset-deg> -5 </pitch-offset-deg>
+      <pitch-offset-deg> -10 </pitch-offset-deg>
       <default-field-of-view-deg type="double"> 70 </default-field-of-view-deg>
     </config>
   </view>
@@ -84,4 +86,3 @@
   </view>
 
 </PropertyList>
-
