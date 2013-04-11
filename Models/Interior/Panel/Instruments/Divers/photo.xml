@@ -5,12 +5,7 @@
   <path>photo.ac</path>
     
   <animation>
-    <object-name>fond</object-name>
-    <object-name>visses</object-name>
-    <object-name>tour</object-name>
-    <object-name>face</object-name>
-    <object-name>needle</object-name>
-    <object-name>red</object-name>
-    <object-name>green</object-name>
+    <object-name>photo</object-name>
   </animation>
+  
 </PropertyList>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Blohm & Voss BV 170 - 2010 Emmanuel BARANGER
+                 updated - 2013 Emmanuel BARANGER / Tobias Henkel
 
      sources          : http://www.luft46.com/bv/bvp170.html
                         http://hastur.net/abbe/crimsonskies/aircraft/luft46/bv.p.170/bv.p.170.html
@@ -11,7 +12,7 @@
      height           :  3.65 m     (   12 ft  0 in )
      max speed        :   820 km/h a 8000 m (430 kt )
      empty weight     :  9100 kg    ( 20062 lb      )
-     engine           :  3 BMW 801D ( 1600 hp each  )
+     engine           :  3 BMW 801D ( 1742 hp each  )
 -->
 
 <airplane mass="20062">
@@ -31,7 +32,7 @@
   </approach>
 
   <!-- Cruise configuration -->
-  <cruise speed="400" alt="26000" fuel="1">
+  <cruise speed="410" alt="26000" fuel="1">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="1"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="0.6"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.8"/>
@@ -41,7 +42,7 @@
     <control-setting axis="/controls/engines/engine[2]/throttle" value="1"/>
     <control-setting axis="/controls/engines/engine[2]/mixture" value="0.6"/>
     <control-setting axis="/controls/engines/engine[2]/propeller-pitch" value="0.8"/>
-    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+    <control-setting axis="/controls/flight/flaps" value="0"/>
   </cruise>
 
   <cockpit x="-2.720" y="0" z="1.590"/>
@@ -118,23 +119,23 @@
 
                  Engine       : BMW 801
                  type         : 14-cylinder supercharged two-row air-cooled radial engine
-                 power        : 1539 hp at 2700 rpm for takeoff at sea level
+                 power        : 1742 hp at 2700 rpm for takeoff at sea level
                  weight       : 1012 kg ( 2226 lb  )
                  Displacement : 41.8 l  ( 2560 in3 )
                  Compression  : 6.5:1
   -->
   <propeller x="6.080" y="7.343" z="0.681"
-             mass="1012"
+             mass="2226"
              moment="10"
              radius="1.80"
-             cruise-power="1065"
-             cruise-speed="400"
-             cruise-rpm="2300"
+             cruise-power="1500"
+             cruise-speed="410"
+             cruise-rpm="2550"
              cruise-alt="26000"
              gear-ratio="0.62">
              <actionpt x="6.691" y="7.343" z="0.681"/>
              <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
-             <piston-engine eng-power="1539"
+             <piston-engine eng-power="1742"
                             eng-rpm="2700"
                             displacement="2560"
                             compression="6.5">
@@ -146,17 +147,17 @@
   </propeller>
 
   <propeller x="6.080" y="0" z="0.681"
-             mass="1012"
+             mass="2226"
              moment="10"
              radius="1.80"
-             cruise-power="1065"
-             cruise-speed="400"
-             cruise-rpm="2300"
+             cruise-power="1500"
+             cruise-speed="410"
+             cruise-rpm="2550"
              cruise-alt="26000"
              gear-ratio="0.62">
              <actionpt x="6.691" y="0" z="0.681"/>
              <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
-             <piston-engine eng-power="1539"
+             <piston-engine eng-power="1742"
                             eng-rpm="2700"
                             displacement="2560"
                             compression="6.5">
@@ -168,17 +169,17 @@
   </propeller>
 
   <propeller x="6.080" y="-7.343" z="0.681"
-             mass="1012"
+             mass="2226"
              moment="10"
              radius="1.80"
-             cruise-power="1065"
-             cruise-speed="400"
-             cruise-rpm="2300"
+             cruise-power="1500"
+             cruise-speed="410"
+             cruise-rpm="2550"
              cruise-alt="26000"
              gear-ratio="0.62">
              <actionpt x="6.691" y="-7.343" z="0.681"/>
              <control-input axis="/controls/engines/engine[2]/propeller-pitch" control="ADVANCE"/>
-             <piston-engine eng-power="1539"
+             <piston-engine eng-power="1742"
                             eng-rpm="2700"
                             displacement="2560"
                             compression="6.5">
@@ -248,7 +249,7 @@
   <tank x="3.5" y=" 4.0" z="0.900" capacity="300"/>
   <tank x="3.5" y="-4.0" z="0.900" capacity="300"/>
 
-  <!-- Mass distribution -->
-  <ballast x="9.5" y="0.685" z="-5" mass="1500"/>
+  <!-- Mass distribution
+  <ballast x="9" y="0.685" z="-5" mass="1000"/> -->
 
 </airplane>
