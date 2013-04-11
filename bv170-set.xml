@@ -6,7 +6,7 @@
   <sim>
 
     <description>Blohm und Voss BV170 (YASim)</description>
-    <author>BARANGER Emmanuel (3D/FDM)</author>
+    <author>BARANGER Emmanuel (3D/FDM), Tobias HENKEL (Texture)</author>
 
     <rating>
      <FDM type="int">     2 </FDM>

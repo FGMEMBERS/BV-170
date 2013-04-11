@@ -7,7 +7,13 @@
   <animation>
     <object-name>interieur</object-name>
     <object-name>inttour</object-name>
-
+    <object-name>planchet</object-name>
+    <object-name>structure</object-name>
+    <object-name>attaches</object-name>
+    <object-name>tuyaux</object-name>
+    <object-name>seats</object-name>
+    <object-name>sides</object-name>
+    
     <object-name>intvitres</object-name>
   </animation>
 

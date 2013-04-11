@@ -4,6 +4,8 @@
 
   <sim include="Nasal/views.xml">
 
+    <description>Blohm und Voss BV170 (YASim)</description>
+    <author>BARANGER Emmanuel (3D/FDM), Tobias HENKEL (Texture)</author>
     <aircraft-version>0.1</aircraft-version>
     <status>Alpha</status>
 
@@ -64,7 +66,6 @@
     <bv170>
       <file>Aircraft/BV-170/Nasal/liveries.nas</file>
       <file>Aircraft/BV-170/Nasal/light.nas</file>
-      <file>Aircraft/BV-170/Nasal/rpm.nas</file>
     </bv170>
   </nasal>
    

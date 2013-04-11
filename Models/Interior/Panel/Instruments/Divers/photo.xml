@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList> 
+
+  <path>photo.ac</path>
+    
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>tour</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <object-name>red</object-name>
+    <object-name>green</object-name>
+  </animation>
+</PropertyList>

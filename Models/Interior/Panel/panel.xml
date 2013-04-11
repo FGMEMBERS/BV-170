@@ -98,5 +98,70 @@
     </offsets>
   </model>
 
+  <!-- GEAR -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/gear/gear.xml</path>
+    <offsets>
+      <x-m>  0.141 </x-m>
+      <y-m>  0.235 </y-m>
+      <z-m> -0.094 </z-m>
+    </offsets>
+  </model>
+
+  <!-- NITRO -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/nitro/nitro.xml</path>
+    <offsets>
+      <x-m>  0.144 </x-m>
+      <y-m> -0.171 </y-m>
+      <z-m> -0.080 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.14393 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.03000 </z-m>
+    </offsets>
+  </model>
+
+  <!-- FLAPS -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/flaps/flaps.xml</path>
+    <offsets>
+      <x-m>  0.11856 </x-m>
+      <y-m> -0.38917 </y-m>
+      <z-m> -0.09894 </z-m>
+    </offsets>
+  </model>
+
+  <!-- KABIN -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/kabin/kabin.xml</path>
+    <offsets>
+      <x-m>  0.14221 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.104193 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TEMP -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/temp/temp.xml</path>
+    <offsets>
+      <x-m>  0.143 </x-m>
+      <y-m>  0.183 </y-m>
+      <z-m> -0.095 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Divers -->
+  <model>
+    <path>Aircraft/BV-170/Models/Interior/Panel/Instruments/Divers/all-divers.xml</path>
+  </model>
+
 </PropertyList>
 

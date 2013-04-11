@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>kabin.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>button</object-name>
+  </animation>
+
+</PropertyList>

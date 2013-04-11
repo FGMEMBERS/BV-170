@@ -5,7 +5,7 @@
   <chase-distance-m type="double" archive="y"> -30 </chase-distance-m>
 
   <view n="100">
-    <name>Passanger Seat View</name>
+    <name>Copilot Seat View</name>
     <internal archive="y">true</internal>
     <type>lookfrom</type>
     <config>
@@ -44,7 +44,7 @@
       <x-offset-m archive="y"> 0.000 </x-offset-m> <!--right-->
       <y-offset-m archive="y"> 1.590 </y-offset-m> <!--up-->
       <z-offset-m archive="y"> 2.720 </z-offset-m> <!--back-->
-      <pitch-offset-deg> -10 </pitch-offset-deg>
+      <pitch-offset-deg> -11 </pitch-offset-deg>
       <default-field-of-view-deg type="double"> 70 </default-field-of-view-deg>
     </config>
   </view>

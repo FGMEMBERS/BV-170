@@ -1,6 +1,24 @@
-default
+default - texture / textureHD
 
-These liveries were made by : Laurnet HAYVEL 2009
+1Flugs / 1FlugsHD
 
-Thanks to him.
+2Rekord / 2RekordHD
 
+2Rekordversuch / 2RekordversuchHD
+
+black / blackHD
+
+Blue / BlueHD
+
+Red / RedHD
+
+Schnellbomber / SchnellbomberHD
+
+These liveries were made by : Tobias Henkel 2013
+
+Thanks to him
+
+kamo
+
+These liveries were made by : Emmanuel BARANGER 2010
+ 

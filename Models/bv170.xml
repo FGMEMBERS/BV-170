@@ -279,6 +279,37 @@
     <object-name>Interieur</object-name>
   </animation>
 
+  <!-- Les mmoteurs -->
+  <!-- Moteur Left -->
+  <model>
+    <path>Aircraft/BV-170/Models/Engines/engine.xml</path>
+    <offsets>
+      <x-m> -6.000 </x-m>
+      <y-m> -7.343 </y-m>
+      <z-m>  0.681 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Center -->
+  <model>
+    <path>Aircraft/BV-170/Models/Engines/engine.xml</path>
+    <offsets>
+      <x-m> -6.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.681 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Moteur Right -->
+  <model>
+    <path>Aircraft/BV-170/Models/Engines/engine.xml</path>
+    <offsets>
+      <x-m> -6.000 </x-m>
+      <y-m>  7.343 </y-m>
+      <z-m>  0.681 </z-m>
+    </offsets>
+  </model>
+
   <!-- Cranking effects -->
   <!-- Moteur Gauche / Gauche haut -->
   <model>
@@ -502,37 +533,6 @@
     </offsets>
   </model>
 
-  <!-- Les mmoteurs -->
-  <!-- Moteur Left -->
-  <model>
-    <path>Aircraft/BV-170/Models/Engines/engine.xml</path>
-    <offsets>
-      <x-m> -6.000 </x-m>
-      <y-m> -7.343 </y-m>
-      <z-m>  0.681 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Center -->
-  <model>
-    <path>Aircraft/BV-170/Models/Engines/engine.xml</path>
-    <offsets>
-      <x-m> -6.000 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.681 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Right -->
-  <model>
-    <path>Aircraft/BV-170/Models/Engines/engine.xml</path>
-    <offsets>
-      <x-m> -6.000 </x-m>
-      <y-m>  7.343 </y-m>
-      <z-m>  0.681 </z-m>
-    </offsets>
-  </model>
-
   <!-- Les helices --> 
   <animation>
     <name>HeliceCompleteG</name>
@@ -585,6 +585,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceCompleteG</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>engines/engine[0]/rpm</property>
     <factor> 1 </factor>
     <center>
@@ -650,6 +656,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceCompleteC</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[1]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>engines/engine[1]/rpm</property>
     <factor> 1 </factor>
     <center>
@@ -715,6 +727,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceCompleteD</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[2]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>engines/engine[2]/rpm</property>
     <factor> 1 </factor>
     <center>
