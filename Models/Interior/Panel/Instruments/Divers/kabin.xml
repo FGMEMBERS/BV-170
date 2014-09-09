@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList> 
+
+  <path>kabin.ac</path>
+    
+  <animation>
+    <object-name>kabin</object-name>
+  </animation>
+  
+</PropertyList>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList> 
+
+  <path>starter.ac</path>
+    
+  <animation>
+    <object-name>starter</object-name>
+    <object-name>engine1on</object-name>
+    <object-name>engine2on</object-name>
+    <object-name>engine3on</object-name>
+    <object-name>engine1off</object-name>
+    <object-name>engine2off</object-name>
+    <object-name>engine3off</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>engine1on</object-name>
+    <object-name>engine2on</object-name>
+    <object-name>engine3on</object-name>
+    <object-name>engine1off</object-name>
+    <object-name>engine2off</object-name>
+    <object-name>engine3off</object-name>
+    <emission>
+      <red>   1.9 </red>
+      <green> 1.9 </green>
+      <blue>  1.9 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>engine1on</object-name>
+    <condition>
+      <property>/engines/engine[0]/running</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>engine2on</object-name>
+    <condition>
+      <property>/engines/engine[1]/running</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>engine3on</object-name>
+    <condition>
+      <property>/engines/engine[2]/running</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>engine1off</object-name>
+    <condition>
+      <not><property>/engines/engine[0]/running</property></not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>engine2off</object-name>
+    <condition>
+      <not><property>/engines/engine[1]/running</property></not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>engine3off</object-name>
+    <condition>
+      <not><property>/engines/engine[2]/running</property></not>
+    </condition>
+  </animation>
+
+</PropertyList>

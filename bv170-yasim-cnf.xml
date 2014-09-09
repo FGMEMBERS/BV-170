@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="bv170-base.xml">
+
+  <sim>
+
+    <description>Blohm und Voss BV170 (YASim)</description>
+    <author>BARANGER Emmanuel (3D/FDM), Tobias HENKEL (Texture)</author>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">bv170-yasim</aero>
+
+  </sim>
+
+</PropertyList>

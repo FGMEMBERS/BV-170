@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <description>Blohm und Voss BV170 (YASim)</description>
+    <author>BARANGER Emmanuel (3D/FDM), Tobias HENKEL (Texture)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/BV-170/bv170-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/BV-170/Sounds/bv170-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/BV-170/Models/bv170.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                      <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                      <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                      <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                      <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                      <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                      <!-- 5 immat -->
+        <int type="bool" n="6"> 1 </int>                                      <!-- 6 smoke/bomb/torpedo -->
+        <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
+        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
+        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
+        <int n="10" alias="/controls/electric/key-pos">  0 </int>             <!-- 10 key position -->
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!-- 11 altitude for MP shadow -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>  
+        <string n="9" type="string" />                                                   <!-- string[9] reserved for bombable mode -->
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Blohm Und Voss BV 170</title>
+    </help>
+
+    <menubar include="Dialogs/bv170-menu.xml"/>
+
+  </sim>
+ 
+  <input>
+    <keyboard include="Nasal/bv170-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <doors>
+      <file>Aircraft/BV-170/Nasal/doors.nas</file>
+    </doors>
+    <bv170>
+      <file>Aircraft/BV-170/Nasal/liveries.nas</file>
+      <file>Aircraft/BV-170/Nasal/light.nas</file>
+    </bv170>
+  </nasal>
+   
+</PropertyList>
