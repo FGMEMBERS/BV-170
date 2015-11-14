@@ -9,7 +9,7 @@ data 5
 panel
 texture "panel.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 65
 0.142245 -0.008012 0.424782
 0.142245 -0.039404 0.439262

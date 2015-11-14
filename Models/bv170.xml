@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -143,18 +143,10 @@
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
   </animation>
 
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
-    <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-    </condition>
     <object-name>fuselage</object-name>
     <object-name>capots</object-name>
     <object-name>ailes</object-name>
@@ -179,61 +171,16 @@
     <object-name>bolC</object-name>
     <object-name>bolD</object-name>
   </effect>
-
-  <effect>
-    <inherits-from>Effects/model-combined-deferred</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
-    <object-name>fuselage</object-name>
-    <object-name>capots</object-name>
-    <object-name>ailes</object-name>
-    <object-name>aileronG</object-name>
-    <object-name>aileronD</object-name>
-    <object-name>volets</object-name>
-    <object-name>ailes2</object-name>
-    <object-name>profondeur</object-name>
-    <object-name>moteurs</object-name>
-    <object-name>derives</object-name>
-    <object-name>directionG</object-name>
-    <object-name>directionD</object-name>
-    <object-name>porteGG</object-name>
-    <object-name>porteGD</object-name>
-    <object-name>porteCG</object-name>
-    <object-name>porteCD</object-name>
-    <object-name>porteDG</object-name>
-    <object-name>porteDD</object-name>
-    <object-name>porteAG</object-name>
-    <object-name>porteAD</object-name>
-    <object-name>bolG</object-name>
-    <object-name>bolC</object-name>
-    <object-name>bolD</object-name>
-  </effect>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitres</object-name>
-    <object-name>propdiscG</object-name>
-    <object-name>propblurG</object-name>
-    <object-name>propdiscC</object-name>
-    <object-name>propblurC</object-name>
-    <object-name>propdiscD</object-name>
-    <object-name>propblurD</object-name>
-  </animation>
 
   <!-- working for Rembrandt -->
   <effect>
+    <inherits-from>Aircraft/BV-170/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitres</object-name>
+  </effect>
+  
+  <!-- working for Rembrandt -->
+  <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
     <object-name>vitres</object-name>
     <object-name>propdiscG</object-name>
     <object-name>propblurG</object-name>
@@ -242,7 +189,7 @@
     <object-name>propdiscD</object-name>
     <object-name>propblurD</object-name>
   </effect>
-
+  
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/BV-170/Models/shadow.xml</path>
@@ -255,15 +202,8 @@
 
   <!-- Interieur -->
   <model>
-    <name>Interieur</name>
     <path>Aircraft/BV-170/Models/Interior/interior.xml</path>
   </model>
-
-  <!-- For Rembrandt -->
-  <animation>
-    <type>noshadow</type>
-    <object-name>Interieur</object-name>
-  </animation>
 
   <!-- Les mmoteurs -->
   <!-- Moteur Left -->
@@ -297,187 +237,18 @@
   </model>
 
   <!-- Cranking effects -->
-  <!-- Moteur Gauche / Gauche haut -->
   <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m> -7.893 </y-m>
-      <z-m>  0.939 </z-m>
-    </offsets>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking-left.xml</path>
   </model>
-
-  <!-- Moteur Gauche / Gauche Milieu -->
+  
   <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m> -7.935 </y-m>
-      <z-m>  0.581 </z-m>
-    </offsets>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking-center.xml</path>
   </model>
-
-  <!-- Moteur Gauche / Gauche Bas -->
+  
   <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m> -7.738 </y-m>
-      <z-m>  0.223 </z-m>
-    </offsets>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking-right.xml</path>
   </model>
-
-  <!-- Moteur Gauche / Droit haut -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m> -6.793 </y-m>
-      <z-m>  0.939 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Gauche / Droit Milieu -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m> -6.751 </y-m>
-      <z-m>  0.581 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Gauche / Droit Bas -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m> -6.948 </y-m>
-      <z-m>  0.223 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Droit / Droit haut -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m>  7.893 </y-m>
-      <z-m>  0.939 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Droit / Droit Milieu -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m>  7.935 </y-m>
-      <z-m>  0.581 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Droit / Droit Bas -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m>  7.738 </y-m>
-      <z-m>  0.223 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Droit / Gauche haut -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m>  6.793 </y-m>
-      <z-m>  0.939 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Droit / Gauche Milieu -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m>  6.751 </y-m>
-      <z-m>  0.581 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Droit / Gauche Bas -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m>  6.948 </y-m>
-      <z-m>  0.223 </z-m>
-    </offsets>
-  </model>
-
-
-  <!-- Moteur Centre / Gauche haut -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m> -0.555 </y-m>
-      <z-m>  0.939 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Centre / Gauche Milieu -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m> -0.592 </y-m>
-      <z-m>  0.581 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Centre / Gauche Bas -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m> -0.395 </y-m>
-      <z-m>  0.223 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Centre / Droit haut -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m>  0.555 </y-m>
-      <z-m>  0.939 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Centre / Droit Milieu -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m>  0.592 </y-m>
-      <z-m>  0.581 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Moteur Centre / Droit Bas -->
-  <model>
-    <path>Aircraft/BV-170/Models/Effects/cranking/cranking.xml</path>
-    <offsets>
-      <x-m> -5.660 </x-m>
-      <y-m>  0.395 </y-m>
-      <z-m>  0.223 </z-m>
-    </offsets>
-  </model>
-
+  
   <!-- Effets sur le sol -->
   <!-- Roue gauche -->
   <model>

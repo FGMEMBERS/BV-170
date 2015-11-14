@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Moteur Centre / Gauche haut -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking1.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m> -0.555 </y-m>
+      <z-m>  0.939 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Moteur Centre / Gauche Milieu -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking1.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m> -0.592 </y-m>
+      <z-m>  0.581 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Moteur Centre / Gauche Bas -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking1.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m> -0.395 </y-m>
+      <z-m>  0.223 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Moteur Centre / Droit haut -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking1.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m>  0.555 </y-m>
+      <z-m>  0.939 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Moteur Centre / Droit Milieu -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking1.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m>  0.592 </y-m>
+      <z-m>  0.581 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Moteur Centre / Droit Bas -->
+  <model>
+    <path>Aircraft/BV-170/Models/Effects/cranking/cranking1.xml</path>
+    <offsets>
+      <x-m> -5.660 </x-m>
+      <y-m>  0.395 </y-m>
+      <z-m>  0.223 </z-m>
+    </offsets>
+  </model>
+  
+</PropertyList>
