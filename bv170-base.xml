@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-  <sim include="Nasal/views.xml">
+  <sim include="Systems/views.xml">
 
     <description>Blohm und Voss BV170 (YASim)</description>
     <author>BARANGER Emmanuel (3D/FDM), Tobias HENKEL (Texture)</author>
@@ -29,41 +29,53 @@
     <multiplay>
       <chat_display>1</chat_display>
       <generic> 
-        <int type="int" n="0">  0 </int>                                      <!-- 0 immat -->
-        <int type="int" n="1">  0 </int>                                      <!-- 1 immat -->
-        <int type="int" n="2">  0 </int>                                      <!-- 2 immat -->
-        <int type="int" n="3">  0 </int>                                      <!-- 3 immat -->
-        <int type="int" n="4">  0 </int>                                      <!-- 4 immat -->
-        <int type="int" n="5">  0 </int>                                      <!-- 5 immat -->
-        <int type="bool" n="6"> 1 </int>                                      <!-- 6 smoke/bomb/torpedo -->
-        <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
-        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
-        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
-        <int n="10" alias="/controls/electric/key-pos">  0 </int>             <!-- 10 key position -->
-        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!-- 11 altitude for MP shadow -->
-        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
-        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>  
-        <string n="9" type="string" />                                                   <!-- string[9] reserved for bombable mode -->
+        <int n="0"    type="int">  0 </int>                                         <!-- 0 immat -->
+        <int n="1"    type="int">  0 </int>                                         <!-- 1 immat -->
+        <int n="2"    type="int">  0 </int>                                         <!-- 2 immat -->
+        <int n="3"    type="int">  0 </int>                                         <!-- 3 immat -->
+        <int n="4"    type="int">  0 </int>                                         <!-- 4 immat -->
+        <int n="5"    type="int">  0 </int>                                         <!-- 5 immat -->
+        <int n="6"    type="bool" alias="controls/smoke"> 0 </int>                  <!-- 6 smoke/bomb/torpedo -->
+        <int n="7"    type="int">  0 </int>                                         <!-- 7 color -->
+        <float n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2"  alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3"  alias="/position/altitude-ft"> 0 </float>                     <!-- altitude for Smoke/Trail -->
+        <float n="4"  alias="/engines/engine[0]/rpm"/>
+        <float n="5"  alias="/engines/engine[0]/cranking"/>
+        <float n="6"  alias="/engines/engine[1]/rpm"/>
+        <float n="7"  alias="/engines/engine[1]/cranking"/>
+        <float n="8"  alias="/engines/engine[2]/rpm"/>
+        <float n="9"  alias="/engines/engine[2]/cranking"/>
+        <float n="10"  alias="/gear/gear[0]/wow/"/>
+        <float n="11"  alias="/gear/gear[1]/wow/"/>
+        <float n="12"  alias="/gear/gear[2]/wow/"/>
+        <float n="13"  alias="/gear/gear[3]/wow/"/>
+        <float n="14"  alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="15" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="16" alias="/gear/gear[2]/rollspeed-ms"/>
+        <float n="17" alias="/gear/gear[3]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
       </generic>
     </multiplay>
-
-    <help>
-      <title>Blohm Und Voss BV 170</title>
-    </help>
+    
+    <help include="Systems/help.xml"/>
 
     <menubar include="Dialogs/bv170-menu.xml"/>
 
   </sim>
  
-  <input>
-    <keyboard include="Nasal/bv170-keyboard.xml"/>
-  </input>
+  <input include="Systems/bv170-keyboard.xml"/>
  
   <nasal>
     <doors>
       <file>Aircraft/BV-170/Nasal/doors.nas</file>
     </doors>
     <bv170>
+      <file>Aircraft/BV-170/Nasal/fuel.nas</file>
+      <file>Aircraft/BV-170/Nasal/startup.nas</file>
       <file>Aircraft/BV-170/Nasal/liveries.nas</file>
       <file>Aircraft/BV-170/Nasal/light.nas</file>
     </bv170>

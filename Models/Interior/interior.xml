@@ -17,27 +17,18 @@
     <object-name>intvitres</object-name>
   </animation>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/BV-170/Models/Effects/Glass/glass</inherits-from>
     <object-name>intvitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>intvitres</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- working for Rembrandt -->
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
     <object-name>intvitres</object-name>
   </effect>
-
+  
   <!-- Tableau de bord -->
   <model>
     <path>Aircraft/BV-170/Models/Interior/Panel/panel.xml</path>
@@ -69,4 +60,3 @@
   </model>
 
 </PropertyList>
-

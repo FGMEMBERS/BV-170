@@ -9,7 +9,7 @@ data 6
 button
 texture "kabin.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 225
 0.004723 -0.00159 -0.013102
 0.008103 -0.00159 -0.01283
@@ -1557,7 +1557,7 @@ data 4
 fond
 texture "kabin.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 8
 -0.001589 -0.019108 0.030185
 -0.001589 -0.019108 -0.030185

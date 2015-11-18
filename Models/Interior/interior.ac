@@ -1,6 +1,6 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "transparent" rgb 0.547091 0.565624 0.595981 amb 0 0 0 emis 0 0 0 spec 1 1 1 shi 81 trans 0.85
+MATERIAL "transparent" rgb 1 1 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
 OBJECT world
 kids 9
 OBJECT poly
@@ -10,7 +10,7 @@ data 8
 attaches
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 738
 0.471329 -0.037713 -0.483981
 0.471329 -0.035527 -0.468196
@@ -5063,7 +5063,7 @@ data 9
 interieur
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 237
 1.246378 0.526882 0.000001
 -0.658231 0.509253 0.000001
@@ -6509,7 +6509,7 @@ data 7
 inttour
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 392
 -0.23087 0.304451 0
 -0.331085 0.301479 0
@@ -8276,7 +8276,7 @@ name "intvitres"
 loc 3.11096 1.48892 0.000001
 data 9
 intvitres
-crease 30.000001
+crease 180.000005
 numvert 252
 -0.753081 0.042312 0.360448
 -0.960587 -0.245797 0.501123
@@ -9491,7 +9491,7 @@ data 8
 planchet
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 6
 -1.246378 -0.000001 -0.536291
 1.246378 0.000001 -0.373662
@@ -9522,7 +9522,7 @@ data 5
 seats
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 460
 0.917356 -0.044071 0.134307
 0.91637 -0.042299 0.135583
@@ -13469,7 +13469,7 @@ data 5
 sides
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 82
 0.000831 0.097063 -0.033391
 0.000931 0.087374 -0.039693
@@ -14050,7 +14050,7 @@ data 9
 structure
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 174
 -1.25811 0.228192 -0.39899
 -1.255062 0.228192 -0.432204
@@ -15137,7 +15137,7 @@ data 6
 tuyaux
 texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 9472
 0.825022 0.104206 -0.430383
 0.825025 0.103647 -0.430391

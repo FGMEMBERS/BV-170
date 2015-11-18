@@ -6,18 +6,13 @@
     
     <model>
       <livery>
-        <name type="string">Black-racerHD</name>
-        <texture>/Liveries/blackHD.png</texture>
+        <name type="string">(HHD) Black-racerHD</name>
+        <texture>/Liveries/4096x4096/blackHD.png</texture>
         <specular>
           <red>   0.3 </red>
           <green> 0.3 </green>
           <blue>  0.3 </blue>
         </specular>
-        <emission>
-          <red>   0.2 </red>
-          <green> 0.2 </green>
-          <blue>  0.2 </blue>
-        </emission>
       </livery>
     </model>
     

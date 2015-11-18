@@ -9,7 +9,7 @@ data 5
 photo
 texture "divers.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 12
 -0.00348 -0.032109 0.033957
 -0.00348 -0.032109 -0.038935

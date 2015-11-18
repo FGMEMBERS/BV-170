@@ -9,7 +9,7 @@ data 5
 kabin
 texture "divers.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 8
 -0.001312 -0.012056 0.062214
 -0.001312 -0.012056 -0.062214
